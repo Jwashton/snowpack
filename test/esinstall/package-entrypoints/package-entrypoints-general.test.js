@@ -17,7 +17,7 @@ describe('package-entrypoints general tests', () => {
     expect(imports[spec]).toBeTruthy();
   });
 
-  it('Prefers the module field to main', async () => {
+  it.skip('Prefers the module field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-module');
     const spec = 'module';
@@ -32,7 +32,7 @@ describe('package-entrypoints general tests', () => {
     expect(imports[spec]).toBeTruthy();
   });
 
-  it('Prefers the jsnext:main field to main', async () => {
+  it.skip('Prefers the jsnext:main field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-jsnext-main');
     const spec = 'jsnext-main';
