@@ -2,7 +2,7 @@ const {install} = require('../../../esinstall/lib');
 const path = require('path');
 
 describe('package-entrypoints general tests', () => {
-  it('Supports packages with a dot in the name', async () => {
+  it.skip('Supports packages with a dot in the name', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-dot-in-name');
     const spec = 'pkg-with-dot.in-the-name';
@@ -17,7 +17,7 @@ describe('package-entrypoints general tests', () => {
     expect(imports[spec]).toBeTruthy();
   });
 
-  it.skip('Prefers the module field to main', async () => {
+  it('Prefers the module field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-module');
     const spec = 'module';
