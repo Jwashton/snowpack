@@ -1,8 +1,8 @@
 const {install} = require('../../../esinstall/lib');
 const path = require('path');
 
-describe('package-entrypoints browser configuration', () => {
-  it('supports all of the variations', async () => {
+describe.skip('package-entrypoints browser configuration', () => {
+  it.skip('supports all of the variations', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-export-map-variations');
 
@@ -78,7 +78,7 @@ describe('package-entrypoints browser configuration', () => {
      */
   });
 
-  it("supports preact's configuration", async () => {
+  it.skip("supports preact's configuration", async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-export-preact');
 

@@ -5,8 +5,8 @@ const path = require('path');
  * Browser configuration
  * https://github.com/defunctzombie/package-browser-field-spec
  */
-describe('package-entrypoints browser configuration', () => {
-  it('is able to resolve browser: path configuration', async () => {
+describe.skip('package-entrypoints browser configuration', () => {
+  it.skip('is able to resolve browser: path configuration', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-browser-path');
 
@@ -28,7 +28,7 @@ describe('package-entrypoints browser configuration', () => {
     }
   });
 
-  it('is able to resolve browser object configuration', async () => {
+  it.skip('is able to resolve browser object configuration', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-browser-object');
 

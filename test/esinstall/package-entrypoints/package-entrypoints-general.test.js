@@ -1,8 +1,8 @@
 const {install} = require('../../../esinstall/lib');
 const path = require('path');
 
-describe('package-entrypoints general tests', () => {
-  it('Supports packages with a dot in the name', async () => {
+describe.skip('package-entrypoints general tests', () => {
+  it.skip('Supports packages with a dot in the name', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-dot-in-name');
 
@@ -21,7 +21,7 @@ describe('package-entrypoints general tests', () => {
     }
   });
 
-  it('Prefers the module field to main', async () => {
+  it.skip('Prefers the module field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-module');
     const targets = ['module'];
@@ -39,7 +39,7 @@ describe('package-entrypoints general tests', () => {
     }
   });
 
-  it('Prefers the jsnext:main field to main', async () => {
+  it.skip('Prefers the jsnext:main field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-jsnext-main');
     const targets = ['jsnext-main'];
