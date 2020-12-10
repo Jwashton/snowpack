@@ -1,59 +1,49 @@
 const {install} = require('../../../esinstall/lib');
 const path = require('path');
 
-describe.skip('package-entrypoints general tests', () => {
-  it.skip('Supports packages with a dot in the name', async () => {
+describe('package-entrypoints general tests', () => {
+  it('Supports packages with a dot in the name', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-dot-in-name');
-
-    const targets = ['pkg-with-dot.in-the-name'];
+    const spec = 'pkg-with-dot.in-the-name';
 
     const {
       importMap: {imports},
-    } = await install(targets, {
+    } = await install([spec], {
       cwd,
       dest,
     });
 
-    // Loop over every target and ensure we are able to install
-    for (let pkg of targets) {
-      expect(imports[pkg]).toBeTruthy();
-    }
+    expect(imports[spec]).toBeTruthy();
   });
 
-  it.skip('Prefers the module field to main', async () => {
+  it('Prefers the module field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-module');
-    const targets = ['module'];
+    const spec = 'module';
 
     const {
       importMap: {imports},
-    } = await install(targets, {
+    } = await install([spec], {
       cwd,
       dest,
     });
 
-    // Loop over every target and ensure we are able to install
-    for (let pkg of targets) {
-      expect(imports[pkg]).toBeTruthy();
-    }
+    expect(imports[spec]).toBeTruthy();
   });
 
-  it.skip('Prefers the jsnext:main field to main', async () => {
+  it('Prefers the jsnext:main field to main', async () => {
     const cwd = __dirname;
     const dest = path.join(cwd, 'test-jsnext-main');
-    const targets = ['jsnext-main'];
+    const spec = 'jsnext-main';
 
     const {
       importMap: {imports},
-    } = await install(targets, {
+    } = await install([spec], {
       cwd,
       dest,
     });
 
-    // Loop over every target and ensure we are able to install
-    for (let pkg of targets) {
-      expect(imports[pkg]).toBeTruthy();
-    }
+    expect(imports[spec]).toBeTruthy();
   });
 });
