@@ -4,11 +4,6 @@
   "name": "@snowpack/test-package-entrypoint",
   "description": "Test that we properly handle all package entry points.",
   "scripts": {},
-  "snowpack": {
-    "buildOptions": {
-      "minify": false
-    }
-  },
   "dependencies": {
     "browser-path": "file:./browser-path",
     "browser-dot": "file:./browser-dot",
@@ -27,8 +22,5 @@
     "export-map-object-default": "file:./export-map-object-default",
     "export-map-object-require": "file:./export-map-object-require",
     "preact": "^10.4.6"
-  },
-  "devDependencies": {
-    "esinstall": "^0.4.0"
   }
 }
